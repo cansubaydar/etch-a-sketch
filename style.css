@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Palanquin:wght@400;600&family=Rampart+One&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --clr-bg:  #698474;
+    --clr-primary: #fcf8f3;
+    --clr-secondary: #ffaaa5; 
+    --clr-light: #ffd3b6;
+    --clr-dark: #6b3b38;
+    --clr-shadow: rgba(0, 0, 0, 0.2);
+
+    --font-primary: 'Palanquin', sans-serif;
+    --font-secondary: 'Rampart One', cursive;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 100%;
+    min-height: 100%;
+    background: var(--clr-bg);
+    font-family: var(--font-primary);
+}
+
+a {
+    text-decoration: none;
+    color: var(--clr-primary);
+}
+
+.sketch-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: auto;
+    border-radius: 0.5em;  
+}
+
+.sketch-header {
+    text-align: center;
+}
+
+.sketch-header h1 {
+    margin: 0.3em;
+    font: 1.6em var(--font-secondary);
+    color: var(--clr-light);
+}
+
+.sketch-frame {
+    display: flex;
+    justify-content: center; 
+    background-color: var(--clr-primary);
+    outline: 0.5em solid var(--clr-secondary);
+    border: 0.1em solid var(--clr-dark);
+    border-radius: 0.1em;
+    margin: 0.6em;
+}
+
+.sketch-grid {
+    display: grid;
+    width: 12em;
+    height: 12em;
+}
+
+.selection {
+    display: flex;
+    align-items: center;
+}
+
+.selection-panel {
+    display: flex;
+    flex-direction: column;
+    padding: 1em 0.5em;
+} 
+
+select {
+    outline: none;
+    border: none;
+    background: transparent;
+    color: var(--clr-primary);
+    font: 600 0.75em var(--font-primary);
+    padding: 0.2em 0;
+}
+
+option, label {
+    color: var(--clr-light); 
+    font: 600 0.75em var(--font-primary); 
+}
+
+.erase {
+    display: flex;
+    justify-content: center;
+    width: min(30vw, 4em);
+    padding: 0.1em;
+    background: linear-gradient(var(--clr-secondary), var(--clr-light), var(--clr-secondary));
+    border: 0.2em solid var(--clr-secondary);
+    border-radius: 0.4em;
+}
+
+.erase a {
+    color: var(--clr-dark);
+    font: 600 0.75em var(--font-primary); 
+}
+
+.footer {
+    width: 100%;
+    text-align: center;
+    color: var(--clr-shadow); 
+    font-size: 0.75em;
+    margin-top: auto;
+    padding: 0.5em;
+}
+
+.footer a {
+    color: var(--clr-shadow);
+}
+
+.fab {
+    color: var(--clr-shadow);
+    font-size: 1.1em;
+    padding: 0 0.2em 0 0.5em;
+}
+
+@media screen and (max-width:48em) and (min-width: 30em) {
+    .sketch-header h1 {
+        margin: 0.5em;
+        font-size: 2.6em;
+    }
+    .sketch-frame {
+        border-width: 0.15em;
+        outline-width: 0.75em;
+    }
+    .sketch-grid {
+        width: 24em;
+        height: 24em;
+    }
+    .selection-panel {
+        padding: 1.2em 0.9em;
+    }
+    select, option, label, 
+    .erase a, .footer {
+        font-size: 0.9em;
+    }
+    .erase {
+        width: min(40vw, 5em);
+    }
+    .fab {
+        font-size: 1.15em;
+    }
+} 
+
+@media screen and (min-width: 48em) {
+    .sketch-header h1 {
+        margin: 0.7em;
+        font-size: 3.2em;
+    }
+    .sketch-frame {
+        border-width: 0.2em;
+        outline-width: 1em;
+    }
+    .sketch-grid {
+        width: 30em;
+        height: 30em;
+    }
+    .selection-panel {
+        padding: 1.5em;
+    }
+    select, option, label, .erase a {
+        font-size: 1.1em;
+    }
+    .erase {
+        width: min(50vw, 6em);
+    }
+    .footer {
+        padding-top: 2em;
+        font-size: 1em;
+    }
+    .fab {
+        font-size: 1.1em;
+    }
+}
