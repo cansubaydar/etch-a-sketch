@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etch-a-Sketch</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Palanquin:wght@400;600&family=Rampart+One&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/db70e90eac.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="sketch-container">
+        <div class="sketch-header">
+            <h1>Etch A Sketch</h1>
+        </div>
+        
+        <div class="sketch-frame">
+            <div class="sketch-grid"></div> 
+        </div>
+    </div>
+
+    <div class="selection">
+        <div class="selection-panel">
+            <div class="grid">
+                <label for="grid-size">Choose the grid size:</label>
+                <select name="grid-size" id="grid-size" class="grid-size">
+                    <option value="16">16</option>
+                    <option value="32">32</option>
+                    <option value="48">48</option>
+                    <option value="64">64</option>
+                </select>
+            </div>
+            <div class="penColour">
+                <label for="colour">Pen Colour:</label>
+                <select name="colour" id="colour" class="colour">
+                    <option value="colourful">Colourful</option>
+                    <option value="classic">Classic</option>
+                </select>
+            </div>
+        </div>
+        <div class="erase">
+            <a href="#">Erase</a>
+        </div>
+    </div>
+
+    <div class="footer">
+        Created by <a href="https://github.com/cansubaydar" target="_blank"><i class="fab fa-github"></i>cansubaydar</a> 
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
