@@ -52,8 +52,9 @@ function createDiv(square) {
 createDiv(gridSize.value);
 
 window.addEventListener('resize', () => {
-    if(window.matchMedia('screen and (min-width: 48em)').matches|| 
-        window.matchMedia('screen and (min-width: 30em)').matches) {
+    if(window.matchMedia('screen and (min-width: 48em)').matches || 
+        window.matchMedia('screen and (max-width:48em) and (min-width: 30em)').matches ||
+        window.matchMedia('screen and (max-width: 30em)').matches) {
             createDiv(gridSize.value);
         }
     }); 
