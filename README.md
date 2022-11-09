@@ -10,4 +10,5 @@ In this project:
 - Implemented the touch event for the mobile devices.
 
 Live preview is [here](https://cansubaydar.github.io/etch-a-sketch/)
-[Etch-a-Sketch with Canvas](https://cansubaydar.github.io/etch_a_sketch/)
+
+Etch-a-Sketch with Canvas: [live](https://cansubaydar.github.io/etch_a_sketch/), [repo](https://github.com/cansubaydar/etch_a_sketch) 
